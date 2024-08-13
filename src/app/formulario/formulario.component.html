@@ -1,0 +1,17 @@
+<div class="container">
+    <!-- Usamos Two Way Binding para aplicar cambio a las propiedades en el momento en el que se teclea dentro de los inputs -->
+    <div class="alert alert-danger" role="alert" *ngIf="success==false">
+        Asegurate de haber llenado los campos con valores
+    </div>
+
+    <label for="" class="form-label">Ingresa el primer número</label>
+
+    <p *ngIf="n1==null" class="text-danger m-0">Rellena este campo para continuar</p>
+    <input type="number" class=" form-control" [(ngModel)]="n1">
+
+    <label for="" class="form-label">Ingresa el segundo número</label>
+    <p *ngIf="n2==null" class="text-danger m-0">Rellena este campo para continuar</p>
+    <input type="number" class=" form-control" [(ngModel)]="n2">
+
+    <button class=" btn btn-success mt-3" (click)="sumar()">Sumar</button>
+</div>
